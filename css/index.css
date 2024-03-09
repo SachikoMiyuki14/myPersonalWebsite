@@ -1,0 +1,175 @@
+header {
+    display: none;
+}
+
+/* Navigation styles */
+nav {
+    background-color: transparent; /* Transparent header */
+    text-align: center;
+    padding: 10px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items horizontally */
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    display: block;
+    position: relative; /* Add position relative to make the divider position absolute */
+    width: 80px ; /* Adjusted width for each rectangle */
+    height: 40px; /* Adjusted height for each rectangle */
+    background-color: #4e7af7; /* Blue color */
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px; /* Adjusted border-radius */
+}
+
+nav a:hover {
+    background-color: #3366ff; /* Darker blue on hover */
+}
+
+/* Divider styles */
+nav li:not(:last-child) a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -40px; /* Adjust the position of the divider */
+    transform: translateY(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: #003366; /* Dark blue color */
+}
+
+/* Homepage background */
+body {
+    background-image: url('../images/cc1.jpg');
+    background-size: fixed;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.feedbacks-container {
+    padding-bottom: 60px;
+}
+
+/* Transparent box for home text */
+.transparent-box {
+    padding: 20px; /* Adjust padding as needed */
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Transparent white border */
+    border-radius: 10px; /* Adjust border radius as needed */
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden; /* Prevents lines from overflowing */
+    position: relative;
+
+}
+
+/* Lines on both sides */
+.transparent-box::before,
+.transparent-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #003366; /* Dark blue color */
+}
+
+.transparent-box::before {
+    left: -20px; /* Adjust the position of the left line */
+}
+
+.transparent-box::after {
+    right: -20px; /* Adjust the position of the right line */
+}
+
+.content-wrap {
+    flex: 1 0 auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4e7af7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3366ff;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group input:read-only {
+    background-color: #666;
+    color: white;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
